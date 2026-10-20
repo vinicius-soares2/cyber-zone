@@ -1,0 +1,198 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CYBER ZONE // 1999</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #050505;
+    color: #00ff41;
+    font-family: "Courier New", monospace;
+}
+
+header {
+    padding: 25px 15px;
+    text-align: center;
+    border-bottom: 2px dashed #00ff41;
+}
+
+header h1 {
+    font-size: clamp(28px, 6vw, 48px);
+    text-shadow: 0 0 12px #00ff41;
+    margin: 10px;
+}
+
+header p {
+    font-size: 12px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 15px;
+    border-bottom: 1px solid #147a2c;
+}
+
+a {
+    color: #00ff41;
+}
+
+nav a {
+    padding: 8px 12px;
+    border: 1px solid #00ff41;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background: #00ff41;
+    color: #000;
+}
+
+.container {
+    width: min(900px, 92%);
+    margin: 30px auto;
+}
+
+.panel {
+    border: 1px solid #00ff41;
+    padding: 20px;
+    margin-bottom: 22px;
+    box-shadow: 0 0 8px #003d12;
+}
+
+.panel h2 {
+    font-size: 18px;
+    border-bottom: 1px dashed #00ff41;
+    padding-bottom: 12px;
+}
+
+.link-list {
+    list-style: none;
+    padding: 0;
+}
+
+.link-list li {
+    padding: 9px 0;
+}
+
+.link-list a {
+    text-decoration: none;
+}
+
+.link-list a:hover {
+    text-decoration: underline;
+}
+
+.green {
+    color: #80ff99;
+}
+
+.blink {
+    animation: blink 1s steps(2, start) infinite;
+}
+
+@keyframes blink {
+    to { visibility: hidden; }
+}
+
+footer {
+    text-align: center;
+    padding: 25px 10px;
+    border-top: 2px dashed #00ff41;
+    font-size: 12px;
+}
+
+@media (max-width: 500px) {
+    .panel {
+        padding: 14px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <p>*** BEM-VINDO AO CIBERESPAÇO ***</p>
+    <h1>CYBER ZONE</h1>
+    <p>INTERNET UNDERGROUND // EST. 1999</p>
+    <p class="blink">_ SISTEMA ONLINE _</p>
+</header>
+
+<nav>
+    <a href="#inicio">INÍCIO</a>
+    <a href="#links">LINKS</a>
+    <a href="#sobre">SOBRE</a>
+</nav>
+
+<div class="container">
+
+    <section class="panel" id="inicio">
+        <h2>[ TERMINAL DE ENTRADA ]</h2>
+        <p>> Conexão estabelecida...</p>
+        <p>> Bem-vindo, visitante!</p>
+        <p class="green">
+            Explore os arquivos desta página e descubra
+            novos destinos pela internet.
+        </p>
+        <p>DATA: <span id="clock">--:--:--</span></p>
+    </section>
+
+    <section class="panel" id="links">
+        <h2>[ DIRETÓRIO DE LINKS ]</h2>
+        <ul class="link-list">
+            <li>&gt; <a href="https://massgrave.dev/"
+                target="_blank" rel="noopener noreferrer">Massgrave - Ativador Windows</a></li>
+            <li>&gt; <a href="https://pirataria.link/"
+                target="_blank" rel="noopener noreferrer">Megathread Pirataria - Uma fonte valiosa de recursos excepcionais</a></li>
+            <li>&gt; <a href="https://vinicius-soares2.github.io/portfolio/sites/GeradorDeSenhaJS/GeradorDeSenhaJS.html"
+                target="_blank" rel="noopener noreferrer">Gerador De Senha - Basico</a></li>
+            <li>&gt; <a href="https://store.steampowered.com"
+                target="_blank" rel="noopener noreferrer">Steam</a></li>
+            <li>&gt; <a href="https://www.google.com"
+                target="_blank" rel="noopener noreferrer">Google</a></li>
+        </ul>
+    </section>
+
+    <section class="panel" id="sobre">
+        <h2>[ SOBRE O PROJETO ]</h2>
+        <p>
+            Um pequeno portal inspirado na antiga internet,
+            nos computadores clássicos e na estética cyberpunk.
+        </p>
+        <p class="green">
+            命は、どうやら消えゆくものらしい
+        </p>
+    </section>
+
+</div>
+
+<footer>
+    <p>CYBER ZONE © 1999-2026</p>
+    <p>FEITO NA ERA DO TERMINAL</p>
+</footer>
+
+<script>
+function atualizarRelogio() {
+    const agora = new Date();
+
+    document.getElementById("clock").textContent =
+        agora.toLocaleTimeString("pt-BR");
+}
+
+atualizarRelogio();
+setInterval(atualizarRelogio, 1000);
+</script>
+
+</body>
+</html>
